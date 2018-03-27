@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: rgba(145, 141, 120, 0.15);
+        }
+        
+        .white-text {
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Header/Blog Title */
+        
+        .header {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 50px;
+        }
+        /* Style the top navigation bar */
+        
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+        /* Style the topnav links */
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        /* Change color on hover */
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+        /* Right column */
+        
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: rgba(145, 141, 120, 0.15);
+            padding-left: 20px;
+        }
+        /* Fake image */
+        
+        .fakeimg {
+            background-color: rgba(145, 141, 120, 0.15);
+            width: 100%;
+            padding: 20px;
+        }
+        /* Add a card effect for articles */
+        
+        .card {
+            background-color: rgba(145, 141, 120, 0.15);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Footer */
+        
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: rgba(145, 141, 120, 0.15);
+            margin-top: 20px;
+        }
+        
+        .background-wrap {
+            position: fixed;
+            z-index: -1000;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+        
+        video-bg-elem {
+            position: abosolute;
+            top: 0;
+            left: 0;
+            min-height: 100%;
+            min-width: 100%;
+        }
+        
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 800px) {
+            .leftcolumn,
+            .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 400px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-wrap">
+        <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
+            <source src="https://mecozuma.github.io/Home/4kNovabg.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="header white-text">
+        <h1>NOVA CLUB</h1>
+        <p>Premium Hookah Lounge with Professional Belly Dancers</p>
+    </div>
+    <div class="topnav">
+        <a href="#">Hookah</a>
+        <a href="#">Drinks</a>
+        <a href="#">Dancers</a>
+        <a href="#" style="float:right">Events</a>
+    </div>
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>Hookah</h2>
+                <h5>List of Premium Hookah Flavors</h5>
+                <img src="http://www.thehookahhookup.net/images/slider/led_hookahs_sl_jpg.jpg" height=3 00 width=600>
+                <h6>PREMIUMS</h6>
+                <dl>
+                    <dt>Blue Dream</dt>
+                    <dd>- A combination of fresh blueberry and revitalizing mint</dd>
+                    <dt>Nova Blast</dt>
+                    <dd>-Just fucking get it</dd>
+                </dl>
+            </div>
+            <div class="card">
+                <h2>Drinks</h2>
+                <h5>Mixtures that will make you say FUCK SLEEPING TONIGHT!</h5>
+                <img src="http://prod-upp-image-read.ft.com/bbafa092-6f63-11e7-93ff-99f383b09ff9" height=3 00 width=600>
+                <p>Our master bartenders hand picked from all around the globe mix to perfection. Each brining their own secret mix to the table. None that watering down bullshit. Just straight up what you EXPECT from a drink. </p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>Dancers</h2>
+                <img src="http://www.bestliveentertainment.com/wp-content/uploads/2011/02/Las-Vegas-Belly-Dancers-1-pic-1.jpg" height=5 00 width=600>
+                <p>The lovely dancers who will entertain all the guest on a nightly basis. P.S.A.. At least half these bitches are crazy so beware... </p>
+            </div>
+            <div class="card">
+                <h3>Events</h3>
+                <!-- <div class="fakeimg"><p>Image</p></div>
+                        <div class="fakeimg"><p>Image</p></div>
+                        <div class="fakeimg"><p>Image</p></div>
+                        Unsure if I should delete this due to that </div-->
+            </div>
+            <div class="card">
+                <h3>Follow Us</h3>
+                <p>Novaclub.com</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>Sponsors</h2>
+        <p>
+            ResoNova and 7xSolutions
+        </p>
+    </div>
+</body>
+
+</html>
